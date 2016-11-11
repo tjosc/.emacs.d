@@ -1,2 +1,2 @@
 # .emacs.d
-Emacs configuration
+Basic Emacs configuration file for Python development. Evil mode on by default. 
