@@ -1,0 +1,10 @@
+tomslist = ['tom', 'hit', 'ted', 'wit', 'bat']
+
+def print_a_list(some_list):
+    for item in some_list:
+        print(some_list)
+
+print_a_list(tomslist)
+
+tomslist.append('terror now')
+print_a_list(tomslist)

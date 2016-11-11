@@ -1,0 +1,78 @@
+;; 21 Sept 16: I added the next 6 lines based on instructions from Aaron Bieber at:
+;; http://blog.aaronbieber.com/2015/05/24/from-vim-to-emacs-in-fourteen-days.html
+;; Not 100% sure yet what they mean. 
+(require 'package) ;; Loads the built-in package manager.
+
+;; Adds a couple of popular Emacs package repos to the list of available repos. 
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(setq package-enable-at-startup nil)
+(package-initialize)
+
+;; ******************************************************************************
+
+;; The following is used to maintain the list of packages that I always
+;; want to be installed on the system. This is based off of:
+;; http://stackoverflow.com/questions/10092322/how-to-automatically
+;; -install-emacs-packages-by-specifying-a-list-of-package-name/10095853#10095853
+(defun ensure-package-installed (&rest packages)
+  "Assure every package is installed, ask for installation if it’s not.
+
+Return a list of installed packages or nil for every skipped package."
+  (mapcar
+   (lambda (package)
+     ;; (package-installed-p 'evil)
+     (if (package-installed-p package)
+         nil
+       (if (y-or-n-p (format "Package %s is missing. Install it? " package))
+           (package-install package)
+         package)))
+   packages))
+
+;; make sure to have downloaded archive description.
+;; Or use package-archive-contents as suggested by Nicolas Dudebout.
+(or (file-exists-p package-user-dir)
+    (package-refresh-contents))
+
+;; returns (nil) for packages which are already installed.
+(ensure-package-installed 'evil
+                          'color-theme-modern)
+
+;; activate installed packages.
+(package-initialize)
+
+;; ******************************************************************************
+
+;;Basic Customizations.
+
+;; Tells Emacs to use evil-mode by default. 
+(require 'evil)
+(evil-mode t)
+
+(global-linum-mode t)
+
+;; Visual line mode treats each display line as though it has a newline at the end.
+(global-visual-line-mode t)
+
+;; ******************************************************************************
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes (quote (hober)))
+ '(custom-safe-themes
+   (quote
+    ("31772cd378fd8267d6427cec2d02d599eee14a1b60e9b2b894dd5487bd30978e" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

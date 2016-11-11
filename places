@@ -1,0 +1,64 @@
+;;; -*- coding: utf-8 -*-
+(("/home/tom/.emacs.d/elpa/"
+  (dired-filename . "/home/tom/.emacs.d/elpa/flycheck-20161012.433"))
+ ("/home/tom/.emacs.d/"
+  (dired-filename . "/home/tom/.emacs.d/elpa"))
+ ("/home/tom/"
+  (dired-filename . "/home/tom/.emacs.d"))
+ ("/home/tom/.emacs.d/auto-save-list/"
+  (dired-filename . "/home/tom/.emacs.d/auto-save-list/.."))
+ ("/home/tom/.emacs.d/backups/"
+  (dired-filename . "/home/tom/.emacs.d/backups/.."))
+ ("/home/"
+  (dired-filename . "/home/tom"))
+ ("/home/tom/.emacs.d/init.el" . 912)
+ ("/home/tom/workspace/imdb_exercise/" . 172)
+ ("/home/tom/workspace/"
+  (dired-filename . "/home/tom/workspace/.."))
+ ("/home/tom/Documents/BW/"
+  (dired-filename . "/home/tom/Documents/BW/.."))
+ ("/home/tom/Documents/"
+  (dired-filename . "/home/tom/Documents/fall16"))
+ ("/home/tom/Documents/fall16/data_mining498e/text_mining_project/"
+  (dired-filename . "/home/tom/Documents/fall16/data_mining498e/text_mining_project/tests"))
+ ("/home/tom/Documents/fall16/data_mining498e/text_mining_project/tests/"
+  (dired-filename . "/home/tom/Documents/fall16/data_mining498e/text_mining_project/tests/test.py"))
+ ("/home/tom/Documents/fall16/data_mining498e/text_mining_project/tests/test.py" . 185)
+ ("/home/tom/Documents/fall16/abstract333/"
+  (dired-filename . "/home/tom/Documents/fall16/abstract333/.."))
+ ("/home/tom/Documents/fall16/"
+  (dired-filename . "/home/tom/Documents/fall16/data_mining498e"))
+ ("/home/tom/Documents/fall16/data_mining498e/"
+  (dired-filename . "/home/tom/Documents/fall16/data_mining498e/zipcode"))
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/"
+  (dired-filename . "/home/tom/Documents/fall16/data_mining498e/zipcode/final_code"))
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/"
+  (dired-filename . "/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/zip_cluster.py"))
+ ("/home/tom/Documents/anki_list.txt" . 63)
+ ("/home/tom/.emacs.d/elpa/magit-20161013.1332/magit-autoloads.el" . 55244)
+ ("/home/tom/.emacs.d/elpa/git-commit-20161011.1738/git-commit-autoloads.el" . 1002)
+ ("/home/tom/.emacs.d/elpa/with-editor-20161009.917/with-editor-autoloads.el" . 265)
+ ("/home/tom/.emacs.d/elpa/magit-popup-20161009.1506/magit-popup-autoloads.el" . 265)
+ ("/home/tom/.emacs.d/elpa/async-20161010.2322/async-autoloads.el" . 4147)
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/modified_to_display_all_clusters/"
+  (dired-filename . "/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/modified_to_display_all_clusters/zip_cluster.py"))
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/modified_to_display_all_clusters/zip_cluster.py" . 842)
+ ("/home/tom/.emacs.d/elpa/py-autopep8-20160925.352/py-autopep8-autoloads.el" . 639)
+ ("/home/tom/Documents/fall16/data_mining498e/test_script.py" . 251)
+ ("/home/tom/Documents/system_housekeeping/"
+  (dired-filename . "/home/tom/Documents/system_housekeeping/.."))
+ ("/home/tom/Documents/write/"
+  (dired-filename . "/home/tom/Documents/write/.."))
+ ("/home/tom/workspace/blog_skeleton_dont_use/"
+  (dired-filename . "/home/tom/workspace/blog_skeleton_dont_use/tom-corcoran.github.io"))
+ ("/home/tom/workspace/blog_skeleton_dont_use/tom-corcoran.github.io/"
+  (dired-filename . "/home/tom/workspace/blog_skeleton_dont_use/tom-corcoran.github.io/cv"))
+ ("/home/tom/workspace/blog_skeleton_dont_use/tom-corcoran.github.io/cv/" . 325)
+ ("/home/tom/.emacs.d/elpa/flycheck-20161012.433/flycheck-autoloads.el" . 8380)
+ ("/home/tom/.emacs.d/elpa/pkg-info-20150517.443/pkg-info-autoloads.el" . 3756)
+ ("/home/tom/.emacs.d/elpa/epl-20150517.433/epl-autoloads.el" . 220)
+ ("/home/tom/.emacs.d/elpa/let-alist-1.0.4/let-alist-autoloads.el" . 1252)
+ ("/home/tom/.emacs.d/elpa/seq-2.16/seq-autoloads.el" . 265)
+ ("/home/tom/.emacs.d/elpa/highlight-indentation-20161012.209/highlight-indentation-autoloads.el" . 946)
+ ("/home/tom/.emacs.d/elpa/pyvenv-20160527.442/pyvenv-autoloads.el" . 1888)
+ ("/home/tom/.emacs.d/elpa/yasnippet-20160924.2001/yasnippet-autoloads.el" . 1620))

@@ -1,0 +1,103 @@
+'''
+Thomas Corcoran
+CS 498E
+Dr. Liu
+12 October 2016
+'''
+import matplotlib.pyplot as plt 
+import numpy as np
+import pandas as pd
+
+from geopy.distance import great_circle
+from mpl_toolkits.basemap import Basemap
+from shapely.geometry import MultiPoint
+from sklearn.cluster import DBSCAN
+from sklearn import metrics 
+from sklearn.preprocessing import StandardScaler
+
+
+def reduce_zipcode_csv(csv1,csv2):
+    '''Takes as input two csv files contaning zip codes, returns a pandas 
+    dataframe containing all entries with matching codes. Leading zeros 
+    are added to the zip code series after it is convertd from a float64 
+    type to a string type, for use in other modules.'''
+    df = pd.read_csv(csv1)
+    df.isnull().sum() # Checks for missing values. 
+    with open(csv2, 'rU') as f:
+        contig_states = [line.rstrip() for line in f]
+    mod_df = df[df['state'].isin(contig_states)]
+    mod_df.zip = mod_df.zip.astype(int).astype(str)
+    mod_df['zip'] = mod_df['zip'].str.zfill(5)
+    return mod_df
+
+def cluster(ep, ms, coords):
+    '''Takes coordinate pairs and clustering parameters, returns clusters.
+    eps = epsilon, the max distance points can be from each other while still
+    being considered part of a cluster. eps is defined as some number of
+    kilometers divided by the value of "kms_per_radian" for the algorithm to
+    function properly.
+    ms = min_samples, the minimum cluster size in points.''' 
+    db = DBSCAN(eps=ep, min_samples=ms, algorithm='ball_tree',
+    metric='haversine').fit(np.radians(coords))
+    cluster_labels = db.labels_
+    num_clusters = len(set(cluster_labels)) -1
+    clusters = pd.Series([coords[cluster_labels == n] for n in
+            range(num_clusters)])
+    return (clusters, num_clusters)
+
+def get_centermost_pt(cluster):
+    '''Finds the centermost point, or "centroid" for each identified
+    cluster.'''
+    centroid = (MultiPoint(cluster).centroid.x, MultiPoint(cluster).centroid.y)
+    centermost_point = min(cluster, key=lambda point: great_circle(point, 
+        centroid).m)
+    return tuple(centermost_point)
+
+def write_output(ctrds, conv_epsilon, ms):
+    base_filename = 'clusters_coordinates'
+    filename = '%s_%s_%s%s' % (base_filename, conv_epsilon, ms, '.txt')
+    ctrds.to_csv(filename)
+    return
+
+def map_clusters(latitude, longitude):
+    '''Displays a matplotlib basemap projection of the computed centroids
+    overtop of a centered map of the contenential USA.'''
+    map = Basemap(projection='merc', lat_0 = 39.833333, lon_0 = -98.583333, resolution = 'h',
+         area_thresh = 0.1, llcrnrlon=-126.046841, llcrnrlat=23.565810,
+         urcrnrlon=-67.358775, urcrnrlat=49.735301)
+    map.drawcoastlines()
+    map.drawcountries()
+    map.drawstates()
+    map.fillcontinents(color='orange', lake_color='lightblue')
+    map.drawmapboundary(fill_color='lightblue')
+    x,y = map(longitude,latitude)
+    map.plot(x,y,'bo',markersize=10)
+    plt.show()                                                                                     
+    return
+
+def main():
+    df = reduce_zipcode_csv('zipcode.csv', 'contiguous_states_abbrevs.csv')
+    coordinates = df.as_matrix(columns=['latitude','longitude'])
+
+    # Parameters for the DBSCAN clustering process.
+    # These were determined through experimentation. 
+    # Other interesting (epsilon,minsamples) pairs are:
+    # (1, 53) and (5, 53). 
+    kms_per_radian = 6371.0088
+    epsilon = 5 / kms_per_radian
+    minsamples = 60
+    
+    # Generating clusters and the number of clusters.
+    cluster_list, cluster_count = cluster(epsilon, minsamples, coordinates)
+    
+    # Getting centermost point "centroid" of each cluster. 
+    centroids = cluster_list.map(get_centermost_pt)
+    lats, lons = zip(*centroids)
+    
+    write_output(centroids, epsilon*kms_per_radian, minsamples)
+    print(cluster_count, 'clusters found. Coordinates printed to file.')
+    #map_clusters(lats, lons)
+    print(coordinates)
+    #map_clusters(coordinates['latitude'],coordinates['longitude'])
+
+main()

@@ -1,0 +1,65 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/tom/Documents/fall16/data_mining498e/text_mining_project/" . "tests/")
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/" . "modified_to_display_all_clusters/")
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/" . "final_code/")
+ ("/home/tom/Documents/fall16/data_mining498e/" . "text_mining_project/")
+ ("/home/tom/Documents/fall16/" . "abstract333/")
+ ("/home/" . "tom/")
+ ("/" . "home/")
+ ("/home/tom/Documents/" . "fall16/")
+ ("/home/tom/" . "Documents/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/tom/"
+ "/home/tom/Documents/fall16/abstract333/"
+ "/home/tom/Documents/"
+ "/home/tom/.emacs.d/"
+ "/home/tom/Documents/fall16/data_mining498e/text_mining_project/tests/"
+ "/home/tom/Documents/fall16/data_mining498e/text_mining_project/"
+ "/home/tom/Documents/fall16/data_mining498e/"
+ "/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/modified_to_display_all_clusters/"
+ "/home/tom/Documents/fall16/"
+ "/home/tom/Documents/fall16/cs498E/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "test_script.py"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/tom/" (22556 39878 423573 395000) "Public/" ".xsession-errors" "Music/" ".local/" ".bashrc" ".compiz/" ".xsession-errors.old" ".config/" ".bash_aliases" "Templates/" ".dmrc" ".macromedia/" ".emacs.d/" ".selected_editor" ".python_history" ".sudo_as_admin_successful" ".thunderbird/" ".gconf/" ".nano/" ".vimrc" ".bash_logout" ".gnome2/" ".dbus/" "Pictures/" ".gnome2_private/" "Documents/" "examples.desktop" ".bash_history" ".vim/" ".ssh/" "Desktop/" "../" ".ICEauthority" ".gnupg/" "workspace/" ".mozilla/" ".profile" ".emacs~" "Downloads/" ".cache/" ".viminfo" "Videos/" ".Xauthority" ".adobe/" "./")
+
+ ("/home/tom/Documents/fall16/abstract333/" (22529 32685 312699 201000) "daniel-j-velleman-how-to-prove-it.pdf" "HW_2_Write_Up___Sample_File.pdf" "Abstract_Homework_7.pdf" "Latex_Weekly_for_HW_13.pdf" "Homework2JustificationReadingQuestions.pdf" "Abstract_Homework_6.pdf" "Abstract_HW_13.pdf" "../" "Abstract_Homework_11.pdf" "./")
+
+ ("/home/tom/Documents/fall16/" (22532 57094 932607 593000) "capstone474/" "linear_algebra339/" "Differential Equations - Paul Blanchard.pdf" "data_mining498e/" "abstract333/" "../" "./")
+
+ ("/home/tom/Documents/" (22538 50784 934859 401000) "write/" ".#anki_list.txt" "ABCC/" "fall16/" "resume/" "BW/" ".#TO_DO.txt" "#TO_DO.txt#" "../" "anki_list.txt" "interesting_papers/" "system_housekeeping/" "#anki_list.txt#" "important_emails/" "./")
+
+ ("/home/tom/.emacs.d/" (22532 8787 821452 900000) "ido.last" "auto-save-list/" "snippets/" "old_init_dot_el" "init.el" "init.el~" "../" "places" "elpa/" "backups/" "./")
+
+ ("/home/tom/Documents/fall16/data_mining498e/text_mining_project/tests/" (22532 7574 702024 956000) "test.py" "../" "./")
+
+ ("/home/tom/Documents/fall16/data_mining498e/text_mining_project/" (22532 6965 71366 462000) "example_articles/" "../" "tests/" "./")
+
+ ("/home/tom/Documents/fall16/data_mining498e/" (22530 54823 637360 438000) "CS498EHomework2.odt" "test_script.py" "text_mining_project/" "Pang-Ning Tan, Michael Steinbach, Vipin Kumar - Introduction to Data Mining.pdf" "lisp_test" "lisp_test~" "Chpt2_3_4.odt" "zipcode/" "Foundations_of_Data_Science.pdf" "CS498EHomework3.odt" "../" "CS498EHomework3.pdf" "lisp_test.clj" "Chpt2_3_4.pdf" "./")
+
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/modified_to_display_all_clusters/" (22529 37430 308120 997000) "50_states.csv" "contiguous_states_abbrevs.csv" "zipcode.csv" "../" "clusters_coordinates_5.0_60.txt" "#zip_cluster.py#" "./" "zip_cluster.py")
+
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/final_code/" (22528 61444 927658 581000) "clusters_coordinates_1.0_53.txt" "output_cities.txt" "clusters_coordinates_5.0_53.txt" "zipcode_clustering_assignment.tar.gz" "5_53.png" "50_states.csv" "contiguous_states_abbrevs.csv" "modified_to_display_all_clusters/" "zipcode.csv" "5_60.png" "../" "analysis.txt" "1_53.png" "clusters_coordinates_5.0_60.txt" "./" "zip_cluster.py")
+
+ ("/home/tom/Documents/fall16/data_mining498e/zipcode/" (22526 25245 51243 665000) "zip_code_sketches.txt" "50_states.csv" "contiguous_states_abbrevs.csv" "zipcode.csv" "working/" "final_code/" "../" "original_code_backup.py" "./")
+
+ ("/home/tom/Documents/fall16/cs498E/" (22529 38031 839750 57000) "CS498EHomework2.odt" "test_script.py" "Pang-Ning Tan, Michael Steinbach, Vipin Kumar - Introduction to Data Mining.pdf" "lisp_test" "lisp_test~" "#test_script.py#" "Chpt2_3_4.odt" "zipcode/" "CS498EHomework3.odt" "../" "CS498EHomework3.pdf" "lisp_test.clj" "Chpt2_3_4.pdf" "./")
+
+ ("/home/" (22524 1003 608404 554000) "../" "tom/" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
